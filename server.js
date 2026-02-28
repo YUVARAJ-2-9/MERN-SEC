@@ -14,6 +14,8 @@ app.use(express.json());
 //routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/medicines', require('./routes/medicineRoutes'));
+const trackingRoutes = require('./routes/trackingRoutes');
+app.use('/api/tracking', trackingRoutes);
 
 // Test route
 app.get('/', (req, res) => {
